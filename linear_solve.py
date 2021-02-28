@@ -24,17 +24,19 @@ def solve(equations, variables):
     eq3 =  -1j*b - 2*d + (1+1j)*e + 1<-15 convert.to_rect(1,-15)
     eq1 = 1j*a + (1+1j)*d + (-2-2j)*e + 1<0 convert.to_rect(1,0)
 
+    (0.772<-105 - v)/(0.372+0.198j) - (v - 1<-30)/(0.1+0.65j)
+
     solution = sym.solve([eq1, eq2, eq3, eq4, eq5], sym.symbols('a,b,c,d,e'))'''
     parsed_equations = []
 
     # parse equations
     for e in equations:
         # convert all polar
-        polar_regex = re.compile('\d+<\-?\d+') # regex match for all_digits<(maybe minus sign)all_digits
+        polar_regex = re.compile('([+-]?([0-9]*[.])?[0-9]+)<([+-]?([0-9]*[.])?[0-9]+)') # regex match for all_digits<(maybe minus sign)all_digits
         polars = re.findall(polar_regex, e)
+        print(polars)
         for p in polars:
-            p = parse_polar(p)
-            num = convert.to_rect(p[0], p[1])
+            num = convert.to_rect(float(p[0]), float(p[2]))
             e = re.sub(polar_regex,str(num), e, 1)
         parsed_equations.append(e)
             
@@ -52,7 +54,7 @@ def main(num_equations):
 
     print('Enter Equations: ')
     for n in range(num_equations):
-        eq = input('0=')
+        eq = str(input('0='))
         equations.append(eq)
 
     # call function to solve
