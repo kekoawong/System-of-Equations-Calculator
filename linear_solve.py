@@ -34,7 +34,6 @@ def solve(equations, variables):
         # convert all polar
         polar_regex = re.compile('([+-]?([0-9]*[.])?[0-9]+)<([+-]?([0-9]*[.])?[0-9]+)') # regex match for all_digits<(maybe minus sign)all_digits
         polars = re.findall(polar_regex, e)
-        print(polars)
         for p in polars:
             num = convert.to_rect(float(p[0]), float(p[2]))
             e = re.sub(polar_regex,str(num), e, 1)

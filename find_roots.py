@@ -2,8 +2,9 @@
 import numpy as np 
   
 # Enter the coefficients of the polymial into the array 
-coeff = [1,3,4,3,0,-1,-2,0,0]
+coeff = [1,2,1.5,4,2]
 deg = len(coeff) - 1
+print(coeff)
 print("Degree: " + str(deg))
 # round the roots
 for num in np.roots(coeff):
