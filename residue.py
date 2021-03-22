@@ -1,9 +1,15 @@
 from scipy.signal import residue
+import convert
 
-n = [4,6,0,4]
-k = [1,2,1.5,4,2]
+n = [1,.5,-1.25]
+k = [1,1,-1,-2]
 ans = residue(n,k)
+p = []
+for n in ans[1]:
+    p.append(convert.to_polar(n))
 
+print('Polar representations:')
+print(p)
 print('Residues:')
 print(ans[0])
 print('Poles')
