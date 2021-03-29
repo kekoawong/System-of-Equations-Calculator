@@ -1,16 +1,28 @@
 from scipy.signal import residue
+import pandas as pd
 import convert
 
-n = [1,.5,-1.25]
-k = [1,1,-1,-2]
+# numerator
+n = [6, 36, 32, -464]
+# denominator
+k = [1, 14, 94, 336, 680]
 ans = residue(n,k)
+final_dict = {
+    'Pole': [],
+    'Residue': [],
+    'PolarRep': [],
+}
 p = []
 for n in ans[1]:
     p.append(convert.to_polar(n))
 
-print('Polar representations:')
-print(p)
-print('Residues:')
-print(ans[0])
-print('Poles')
-print(ans[1])
+# append to dict
+for i in range(len(ans[1])):
+    final_dict['Pole'].append(ans[1][i])
+    final_dict['Residue'].append(ans[0][i])
+    final_dict['PolarRep'].append(p[i])
+
+df = pd.DataFrame(final_dict)
+  
+# displaying the DataFrame
+print(df)
