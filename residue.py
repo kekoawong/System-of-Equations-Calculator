@@ -2,10 +2,15 @@ from scipy.signal import residue
 import pandas as pd
 import convert
 
+# INPUT
+
 # numerator
 n = [14,106,216,48]
 # denominator
 k = [1, 8, 16, 0, 0]
+
+# END INPUT
+
 ans = residue(n,k)
 final_dict = {
     'Pole': [],
@@ -20,7 +25,7 @@ for res in ans[0]:
 degree = {}
 # append to dict
 for i in range(len(ans[1])):
-    # get degree of pole
+    # get degree of pole, as function will format answers in increasing degree (according to docs)
     pole = ans[1][i]
     if pole in degree:
         degree[pole] += 1
