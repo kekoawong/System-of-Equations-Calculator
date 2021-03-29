@@ -13,8 +13,8 @@ final_dict = {
     'PolarRep': [],
 }
 p = []
-for n in ans[1]:
-    p.append(convert.to_polar(n))
+for res in ans[0]:
+    p.append(convert.to_polar(res))
 
 # append to dict
 for i in range(len(ans[1])):
@@ -23,6 +23,10 @@ for i in range(len(ans[1])):
     final_dict['PolarRep'].append(p[i])
 
 df = pd.DataFrame(final_dict)
-  
-# displaying the DataFrame
+
+# displaying the results
+print('Numerator:')
+print(n)
+print('Denominator:')
+print(k)
 print(df)
