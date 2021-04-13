@@ -5,9 +5,9 @@ import convert
 # INPUT
 
 # numerator
-n = [1, 5, 8, 4]
+n = [-1.1*10**6]
 # denominator
-k = [1, 4, 8, 8, 4]
+k = [1, 1200,10**6]
 
 # END INPUT
 
