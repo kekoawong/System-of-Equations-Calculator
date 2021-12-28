@@ -1,4 +1,4 @@
-# Electrical Circuits Calculators
+# Electrical Circuits Scripts
 Various helper scripts for solving complex equations for electrical circuits course and problems relating to electrical signals with real and imaginary parts.
 
 ## Organization
