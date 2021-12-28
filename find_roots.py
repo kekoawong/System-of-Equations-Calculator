@@ -2,7 +2,7 @@
 import numpy as np 
   
 # Enter the coefficients of the polymial into the array 
-coeff = [1,1200, 10**6]
+coeff = [0.00001, 2.500016, 3]
 deg = len(coeff) - 1
 print(coeff)
 print("Degree: " + str(deg))

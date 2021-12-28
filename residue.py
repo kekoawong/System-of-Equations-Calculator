@@ -5,9 +5,9 @@ import convert
 # INPUT
 
 # numerator
-n = [-1.1*10**6]
+n = [90, 90*2*10**4]
 # denominator
-k = [1, 1200,10**6]
+k = [1, 19998, -9.99*10**7]
 
 # END INPUT
 
