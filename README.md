@@ -11,7 +11,7 @@ Various helper scripts for solving complex equations for electrical circuits cou
 The scripts *convert.py, find_roots.py*, and *residue.py* have manuel inputs within the script, but *linear_solve.py* will take user command line input with the following usage:
 ```
 Usage:
-        main.py num_equations
+        linear_solve.py num_equations
         0=equation1
         0=equation2
         ...
