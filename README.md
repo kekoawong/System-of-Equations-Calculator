@@ -24,7 +24,7 @@ Usage:
 ```
 
 ## Dependencies
-*[scipy](https://scipy.org/)
-*[numpy](https://numpy.org/)
-*[pandas](https://pandas.pydata.org/)
-*[sympy](https://www.sympy.org/en/index.html)
+* [scipy](https://scipy.org/)
+* [numpy](https://numpy.org/)
+* [pandas](https://pandas.pydata.org/)
+* [sympy](https://www.sympy.org/en/index.html)
